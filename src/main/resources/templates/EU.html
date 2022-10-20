@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ 
+ <html xmlns:th="https://www.thymeLeaf.org">
+ <head>
+ <meta charset= "utf-8">
+ <title>Flowe Power</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+ </head>
+ <body>
+ 
+ 
+	 <nav class="navbar navbar-expand-lg bg-light">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="/flor/getAll">Flowers</a> 
+	          <a class="nav-link" href="/flor/add">Add Flower</a>
+	  </div>
+	</nav>
+ 
+ 
+ 
+ 
+ 
+ 	<div calss = "container">
+ 		<div class= "row">
+ 			<h1> Is From Eu? </h1>
+ 		</div>
+		 <table class="table">
+			  <thead class= "table-dark">
+			    <tr>
+			      <th >#</th>
+			      <th >Noms</th>
+			      <th >Countrie</th>
+			      <th> Tipe </th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr th:each="flor:${Flor}">
+			    	<td th:text="${flor.id}">Id</td>
+		 			<td th:text="${flor.nom}">Name</td>
+		 			<td th:text="${flor.pais}">Country</td>
+		 			<td th:text="${flor.tipusFlor}">Tipe</td>			   
+			    	<td>
+						<a th:href= "@{/flor/update/{id}(id=${flor.id})}" class= "btn btn-info"> Update </a>
+						<a th:href= "@{/flor/delete/{id}(id=${flor.id})}" class= "btn btn-danger"> Eliminar </a>
+					</td>
+			    </tr>
+			    			   
+			  </tbody>
+		</table>
+	 </div>
+ </body>
+ </html>
