@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import cat.itacademy.barcelonactiva.cognoms.nom.s05.t01.n02.model.domain.Flor;
 import cat.itacademy.barcelonactiva.cognoms.nom.s05.t01.n02.model.repository.FlorRepository;
 
 
@@ -21,7 +22,9 @@ public class Application  implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 //		Flor flor = new Flor(1,"Margarita", "Spain");
+//		Flor flor0 = new Flor ( 2 , "Rosa", "Italy");
 //		lista.save(flor);
+//		lista.save(flor0);
 	}
 
 }
